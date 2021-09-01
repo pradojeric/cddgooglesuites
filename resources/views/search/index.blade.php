@@ -65,10 +65,10 @@
                                     <span class="font-weight-bold text-secondary">STEP:</span>
                                     <div class="d-flex flex-column border border-secondary text-white rounded p-4 {{ $result->step_account ? 'bg-success' : 'bg-primary' }}">
                                         <span class="font-weight-bold">
-                                            {{ $result->step_account }}
+                                            {{ $result->step_account ? $result->step_account : 'Please contact our STEP facebook page' }}
                                         </span>
                                         <span>
-                                            {{ $result->step_account ? 'Default Password: colegio2021' : 'Please contact our STEP facebook page' }}
+                                            {{ $result->step_account ? 'Default Password: colegio2021' : '-' }}
                                         </span>
                                     </div>
                                     <div class="mx-auto mt-1">
@@ -81,10 +81,10 @@
                                     <span class="font-weight-bold text-secondary">MyCdD Portal:</span>
                                     <div class="d-flex flex-column border border-secondary text-white rounded p-4 {{ $result->cdd_portal_account ? 'bg-success' : 'bg-primary' }}">
                                         <span class="font-weight-bold">
-                                            {{ $result->cdd_portal_account }}
+                                            {{ $result->cdd_portal_account ? $result->cdd_portal_account : 'Please contact cddmis@cdd.edu.ph' }}
                                         </span>
                                         <span>
-                                            {{ $result->cdd_portal_account ? 'Default Password: '.$result->student_id : 'Please contact cddmis@cdd.edu.ph' }}
+                                            {{ $result->cdd_portal_account ? 'Default Password: '.$result->student_id : '-' }}
                                         </span>
                                     </div>
                                     <div class="mx-auto mt-1">
